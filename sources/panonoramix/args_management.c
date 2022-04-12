@@ -8,6 +8,17 @@
 #include "panoramix.h"
 #include <stdlib.h>
 
+/**
+* @brief It checks if the number of arguments is correct, and if so, it converts the
+* arguments to integers and stores them in the array
+*
+* @param ac the number of arguments passed to the program
+* @param av the array of arguments
+* @param number the array of integers that will be filled with the values of the
+* arguments
+*
+* @return 0 if the arguments are valid, -1 if they are not.
+*/
 int args_management(int ac, char **av, int *number)
 {
     int rvalue = 0;
