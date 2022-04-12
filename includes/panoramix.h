@@ -26,3 +26,6 @@ typedef struct data_s {
 void print_usage(char *name);
 int args_management(int ac, char **av, int *number);
 int panoramix(int ac, char **av);
+int run_panoramix(int *numbers);
+void *villager(void *d);
+void *druid(void *data);
