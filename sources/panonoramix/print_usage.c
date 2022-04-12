@@ -14,6 +14,6 @@
 */
 void print_usage(char *name)
 {
-    printf("USAGE: %s <nb_villagers> <pot_size> <nb_fights> <nb_refills>\n", name);
-    fflush(stdout);
+    fprintf(stderr, "USAGE: %s <nb_villagers> <pot_size> <nb_fights> <nb_refills>\n", name);
+    fflush(stderr);
 }
