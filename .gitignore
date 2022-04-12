@@ -1,0 +1,6 @@
+panoramix
+*.o
+*.gcno
+*.gcda
+*.a
+.vscode
