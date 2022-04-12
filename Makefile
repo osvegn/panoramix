@@ -25,7 +25,7 @@ CC		=	gcc
 
 RM		=	rm -rf
 
-CFLAGS		=	-Wall -Wextra -Wshadow -Werror -I./includes
+CFLAGS		=	-Wall -Wextra -Wshadow -Werror -I./includes -lpthread
 
 all: $(NAME)
 
