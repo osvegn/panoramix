@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('args__management_8c.html',''); initRes
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1b29f381a38a638ffb6b6c681f6b7898"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="args__management_8c.html#a1b29f381a38a638ffb6b6c681f6b7898">args_management</a> (int ac, char **av, int *number)</td></tr>
-<tr class="memdesc:a1b29f381a38a638ffb6b6c681f6b7898"><td class="mdescLeft">&#160;</td><td class="mdescRight">It checks if the number of arguments is correct, and if so, it converts the arguments to integers and stores them in the array.  <a href="args__management_8c.html#a1b29f381a38a638ffb6b6c681f6b7898">More...</a><br /></td></tr>
+<tr class="memdesc:a1b29f381a38a638ffb6b6c681f6b7898"><td class="mdescLeft">&#160;</td><td class="mdescRight">It checks if the number of arguments is correct, and if so, it converts them to integers and stores them in the array pointed to by <code>number</code>  <a href="args__management_8c.html#a1b29f381a38a638ffb6b6c681f6b7898">More...</a><br /></td></tr>
 <tr class="separator:a1b29f381a38a638ffb6b6c681f6b7898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -130,16 +130,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>It checks if the number of arguments is correct, and if so, it converts the arguments to integers and stores them in the array. </p>
+<p>It checks if the number of arguments is correct, and if so, it converts them to integers and stores them in the array pointed to by <code>number</code> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ac</td><td>the number of arguments passed to the program </td></tr>
     <tr><td class="paramname">av</td><td>the array of arguments </td></tr>
-    <tr><td class="paramname">number</td><td>the array of integers that will be filled with the values of the arguments</td></tr>
+    <tr><td class="paramname">number</td><td>the array of integers that will be filled with the arguments</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the arguments are valid, -1 if they are not. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the arguments are valid, 1 if the number of arguments is invalid and -1 if the arguments are not valid. </dd></dl>
 
 </div>
 </div>

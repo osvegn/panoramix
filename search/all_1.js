@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['exit_5ferror_0',['EXIT_ERROR',['../panoramix_8h.html#a036a316feca78ed68d2f2a88cbf6fa8c',1,'panoramix.h']]],
-  ['exit_5fsuccess_1',['EXIT_SUCCESS',['../panoramix_8h.html#a687984f47d8cce148d1b914d2b79612a',1,'panoramix.h']]]
+  ['data_5fs_0',['data_s',['../structdata__s.html',1,'']]],
+  ['data_5ft_1',['data_t',['../panoramix_8h.html#abc127153841754ee8b7845321721d7e7',1,'panoramix.h']]],
+  ['druid_2',['druid',['../panoramix_8c.html#aea338e19fed61a248209bbe567c154c8',1,'panoramix.c']]]
 ];

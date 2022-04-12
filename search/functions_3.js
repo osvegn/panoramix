@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['test_0',['Test',['../test__args__management_8c.html#a113cb7708ccc47bb9d5d76317647106f',1,'Test(args_management, valide_arguments):&#160;test_args_management.c'],['../test__args__management_8c.html#a5cd66e31c0e025c975461b9e427b6ae0',1,'Test(args_management, invalide_arguments_numbers,.init=cr_redirect_stdout):&#160;test_args_management.c'],['../test__args__management_8c.html#af9b75086cbd7c60607b6a66b60519f8f',1,'Test(args_management, invalide_arguments):&#160;test_args_management.c'],['../test__args__management_8c.html#aa1458e9a41b2e5b35bf2ac9ed3c45fa4',1,'Test(args_management, invalide_arguments_three):&#160;test_args_management.c']]]
+  ['panoramix_0',['panoramix',['../panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820',1,'panoramix(int ac, char **av):&#160;panoramix.c'],['../panoramix_8c.html#a42ff0cf65b0acf0a2b7cf816e4a06820',1,'panoramix(int ac, char **av):&#160;panoramix.c']]],
+  ['print_5fusage_1',['print_usage',['../panoramix_8h.html#a3cf97aeec93f08a91c286a5926f19679',1,'print_usage(char *name):&#160;print_usage.c'],['../print__usage_8c.html#a3cf97aeec93f08a91c286a5926f19679',1,'print_usage(char *name):&#160;print_usage.c']]]
 ];
