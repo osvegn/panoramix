@@ -5,3 +5,4 @@ panoramix
 *.a
 .vscode
 unittest
+doc
