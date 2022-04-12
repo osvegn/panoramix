@@ -7,15 +7,16 @@
 
 #include "panoramix.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
-* @brief It checks if the number of arguments is correct, and if so, it converts the
-* arguments to integers and stores them in the array
+* @brief It checks if the number of arguments is correct, and if so, it
+* converts the arguments to integers and stores them in the array
 *
 * @param ac the number of arguments passed to the program
 * @param av the array of arguments
-* @param number the array of integers that will be filled with the values of the
-* arguments
+* @param number the array of integers that will be filled with the values of
+* the arguments
 *
 * @return 0 if the arguments are valid, -1 if they are not.
 */
@@ -32,6 +33,8 @@ int args_management(int ac, char **av, int *number)
     for (int i = 0; i < 4; i++) {
         rvalue = atoi(av[i + 1]);
         if (rvalue <= 0) {
+            fprintf(stderr, "Error: args_management: value \"%s\" is not a \
+valide argument\n", av[i + 1]);
             return (-1);
         }
         number[i] = rvalue;
