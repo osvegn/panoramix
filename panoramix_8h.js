@@ -13,6 +13,9 @@ var panoramix_8h =
       [ "NB_REFILLS", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2afc049d83c2ffec8c0b10b3f6c444e06b", null ]
     ] ],
     [ "args_management", "panoramix_8h.html#a1b29f381a38a638ffb6b6c681f6b7898", null ],
+    [ "druid", "panoramix_8h.html#aea338e19fed61a248209bbe567c154c8", null ],
     [ "panoramix", "panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820", null ],
-    [ "print_usage", "panoramix_8h.html#a3cf97aeec93f08a91c286a5926f19679", null ]
+    [ "print_usage", "panoramix_8h.html#a3cf97aeec93f08a91c286a5926f19679", null ],
+    [ "run_panoramix", "panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c", null ],
+    [ "villager", "panoramix_8h.html#af36769f8e54886027cf07bdb1a811e66", null ]
 ];
