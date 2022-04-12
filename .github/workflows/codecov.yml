@@ -1,0 +1,27 @@
+name: Coverage
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build tests
+        run: make tests_run
+
+      - name: Build report
+        run: gcovr --xml report.xml --exclude tests
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
