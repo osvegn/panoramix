@@ -4,3 +4,4 @@ panoramix
 *.gcda
 *.a
 .vscode
+unittest
