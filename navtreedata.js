@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "panoramix", "index.html", [
-    [ "panoramix", "md__r_e_a_d_m_e.html", null ],
+    [ "panoramix", "md__r_e_a_d_m_e.html", [
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md1", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
