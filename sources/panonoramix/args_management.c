@@ -29,7 +29,7 @@ int args_management(int ac, char **av, int *number)
         return (-1);
     if (ac != ARGS_NUMBER + 1) {
         print_usage(av[0]);
-        return (1);
+        return (-1);
     }
     for (int i = 0; i < 4; i++) {
         rvalue = atoi(av[i + 1]);
