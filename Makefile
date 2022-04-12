@@ -11,9 +11,9 @@ TNAME		=	unittest
 
 MAIN		=	sources/main.c
 
-SRC		=	sources/panoramix/args_management.c \
-			sources/panoramix/panoramix.c \
-			sources/panoramix/print_usage.c \
+SRC		=	sources/panonoramix/args_management.c \
+			sources/panonoramix/panoramix.c \
+			sources/panonoramix/print_usage.c \
 
 TSRC		=	$(SRC) \
 				tests/test_args_management.c \
