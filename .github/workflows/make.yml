@@ -13,6 +13,8 @@ jobs:
     #  image: epitechcontent/epitest-docker
     steps:
     - uses: actions/checkout@v2
+      with:
+        clean: false
     - name: Run make
       run: make
     - name: Check valide executable name
