@@ -9,13 +9,34 @@ on:
 jobs:
   make:
     runs-on: ubuntu-latest
-    container:
-      image: epitechcontent/epitest-docker
+    #container:
+    #  image: epitechcontent/epitest-docker
     steps:
     - uses: actions/checkout@v2
-
     - name: Run make
       run: make
-
-    - name: Check valide name
+    - name: Check valide executable name
       run: find panoramix
+
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run make clean
+      run: make clean
+    - name: Check executable already exist
+      run: find panoramix
+
+  fclean:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run make fclean
+      run: make fclean
+
+  re:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run make re
+      run: make re
