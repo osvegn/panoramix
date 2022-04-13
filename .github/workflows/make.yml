@@ -9,8 +9,6 @@ on:
 jobs:
   make:
     runs-on: ubuntu-latest
-    #container:
-    #  image: epitechcontent/epitest-docker
     steps:
     - uses: actions/checkout@v2
     - name: Run make
@@ -27,6 +25,7 @@ jobs:
       run: make clean
 
   fclean:
+    needs: make
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -34,6 +33,7 @@ jobs:
       run: make fclean
 
   re:
+    needs: make
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
