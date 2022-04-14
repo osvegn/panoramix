@@ -7,9 +7,10 @@
 
 #pragma once
 
+#include <pthread.h>
+
 #define EXIT_SUCCESS 0
 #define EXIT_ERROR 84
-
 #define ARGS_NUMBER 4
 
 typedef enum villager_sentance_type_e {
@@ -27,9 +28,10 @@ typedef enum args_type_e {
     NB_REFILLS
 } args_type_t;
 
-typedef struct data_s {
+typedef struct villagers_data_s {
+    pthread_t thread;
     int id;
-} data_t;
+} villagers_data_t;
 
 void print_usage(char *name);
 int args_management(int ac, char **av, int *number);
