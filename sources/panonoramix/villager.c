@@ -25,7 +25,7 @@ void print_villager_sentance(villager_sentance_type_t type, int id, int value)
 
 void *villager(void *d)
 {
-    data_t *data = d;
+    villagers_data_t *data = d;
 
     print_villager_sentance(VILLAGER_START, data->id, 0);
     return (NULL);
