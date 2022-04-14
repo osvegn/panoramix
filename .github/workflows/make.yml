@@ -25,7 +25,7 @@ jobs:
       run: make clean
 
   fclean:
-    needs: make
+    needs: clean
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
       run: make fclean
 
   re:
-    needs: make
+    needs: fclean
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
