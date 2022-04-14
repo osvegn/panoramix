@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['start_5fvillagers_0',['start_villagers',['../run__panoramix_8c.html#ad8e6fa8ec958fe39e31d9821baba3b25',1,'run_panoramix.c']]]
+  ['run_5fpanoramix_0',['run_panoramix',['../panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c',1,'run_panoramix(int *numbers):&#160;run_panoramix.c'],['../run__panoramix_8c.html#a75ecbf36c46f48cd164f7f7fa4bc243c',1,'run_panoramix(int *numbers):&#160;run_panoramix.c']]]
 ];
