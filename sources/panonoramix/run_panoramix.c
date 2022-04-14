@@ -7,27 +7,66 @@
 
 #include "panoramix.h"
 #include <stdlib.h>
-#include <pthread.h>
 #include <stdio.h>
 
+/**
+* @brief It waits for all the villagers to finish their work
+*
+* @param data the array of villagers
+* @param nb_villagers the number of villagers in the village
+*/
+void wait_for_all_villagers(villagers_data_t *data, int nb_villagers)
+{
+    int index = 1;
+
+    while (index < nb_villagers + 1) {
+        pthread_join(data[index].thread, NULL);
+        index++;
+    }
+}
+
+/**
+* @brief It creates the druid thread and the villagers threads
+*
+* @param data the array of villagers_data_t
+* @param nb_villagers the number of villagers to create
+*
+* @return the value 0.
+*/
+int start_villagers(villagers_data_t *data, int nb_villagers)
+{
+    int index = 1;
+
+    pthread_create(&data[0].thread, NULL, &druid, NULL);
+    while (index < nb_villagers + 1) {
+        data[index].id = index - 1;
+        pthread_create(&data[index].thread, NULL, &villager, &data[index]);
+        index++;
+    }
+    return (0);
+}
+
+/**
+* @brief It creates a number of villagers, each of which will try to drink from the pot
+*
+* @param numbers an array of integers containing the number of villagers, the
+* number of potions, and the number of ingredients.
+*
+* @return The return value is the number of the pot.
+*/
 int run_panoramix(int *numbers)
 {
-    pthread_t *villagers = NULL;
-    data_t *data = NULL;
+    villagers_data_t *data = NULL;
+    int nb_pot = numbers[POT_SIZE];
 
-    villagers = malloc(sizeof(pthread_t) * (numbers[NB_VILLAGERS] + 1));
-    data = malloc(sizeof(data_t) * (numbers[NB_VILLAGERS] + 1));
-    if (!villagers || !data) {
+    (void)nb_pot;
+    data = malloc(sizeof(villagers_data_t) * (numbers[NB_VILLAGERS] + 1));
+    if (!data) {
         fprintf(stderr, "Error: run_panoramix: malloc failed\n");
         return (-1);
     }
-    pthread_create(&villagers[0], NULL, &druid, NULL);
-    for (int i = 1; i < numbers[NB_VILLAGERS] + 1; i++) {
-        data[i].id = i - 1;
-        pthread_create(&villagers[i], NULL, &villager, &data[i]);
-    }
-    for (int i = 1; i < numbers[NB_VILLAGERS] + 1; i++) {
-        pthread_join(villagers[i], NULL);
-    }
+    start_villagers(data, numbers[NB_VILLAGERS]);
+    wait_for_all_villagers(data, numbers[NB_VILLAGERS]);
+    free(data);
     return (0);
 }
