@@ -92,12 +92,13 @@ $(document).ready(function(){initNavTree('panoramix_8h.html',''); initResizable(
   <div class="headertitle"><div class="title">panoramix.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;pthread.h&gt;</code><br />
+</div>
 <p><a href="panoramix_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdata__s.html">data_s</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html">villagers_data_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -115,8 +116,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ad2eb1b8006daa670b6f3175c014205ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713e63245a5828a6a3b1348019bfa6e2"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2">args_type_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a713e63245a5828a6a3b1348019bfa6e2">args_type_t</a></td></tr>
 <tr class="separator:a713e63245a5828a6a3b1348019bfa6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc127153841754ee8b7845321721d7e7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structdata__s.html">data_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#abc127153841754ee8b7845321721d7e7">data_t</a></td></tr>
-<tr class="separator:abc127153841754ee8b7845321721d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1d0f21dd1c981fb0ed99e9b366f752"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structvillagers__data__s.html">villagers_data_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a></td></tr>
+<tr class="separator:adc1d0f21dd1c981fb0ed99e9b366f752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -148,6 +149,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a42ff0cf65b0acf0a2b7cf816e4a06820"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820">panoramix</a> (int ac, char **av)</td></tr>
 <tr class="separator:a42ff0cf65b0acf0a2b7cf816e4a06820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c">run_panoramix</a> (int *numbers)</td></tr>
+<tr class="memdesc:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a number of villagers, each of which will try to drink from the pot.  <a href="panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c">More...</a><br /></td></tr>
 <tr class="separator:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36769f8e54886027cf07bdb1a811e66"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#af36769f8e54886027cf07bdb1a811e66">villager</a> (void *d)</td></tr>
 <tr class="separator:af36769f8e54886027cf07bdb1a811e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,20 +216,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abc127153841754ee8b7845321721d7e7" name="abc127153841754ee8b7845321721d7e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc127153841754ee8b7845321721d7e7">&#9670;&nbsp;</a></span>data_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structdata__s.html">data_s</a> <a class="el" href="panoramix_8h.html#abc127153841754ee8b7845321721d7e7">data_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad2eb1b8006daa670b6f3175c014205ed" name="ad2eb1b8006daa670b6f3175c014205ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2eb1b8006daa670b6f3175c014205ed">&#9670;&nbsp;</a></span>villager_sentance_type_t</h2>
 
@@ -236,6 +224,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">typedef enum <a class="el" href="panoramix_8h.html#a80aecd613f72c5580c5dc0c975d6d980">villager_sentance_type_e</a> <a class="el" href="panoramix_8h.html#ad2eb1b8006daa670b6f3175c014205ed">villager_sentance_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc1d0f21dd1c981fb0ed99e9b366f752" name="adc1d0f21dd1c981fb0ed99e9b366f752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1d0f21dd1c981fb0ed99e9b366f752">&#9670;&nbsp;</a></span>villagers_data_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structvillagers__data__s.html">villagers_data_s</a> <a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -451,6 +453,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It creates a number of villagers, each of which will try to drink from the pot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numbers</td><td>an array of integers containing the number of villagers, the number of potions, and the number of ingredients.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value is the number of the pot. </dd></dl>
 
 </div>
 </div>

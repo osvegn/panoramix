@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5fs_0',['data_s',['../structdata__s.html',1,'']]]
+  ['villagers_5fdata_5fs_0',['villagers_data_s',['../structvillagers__data__s.html',1,'']]]
 ];

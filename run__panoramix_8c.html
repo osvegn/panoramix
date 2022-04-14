@@ -90,12 +90,18 @@ $(document).ready(function(){initNavTree('run__panoramix_8c.html',''); initResiz
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="panoramix_8h_source.html">panoramix.h</a>&quot;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;pthread.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad33f43143143283b9d48e101bb80c5d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run__panoramix_8c.html#ad33f43143143283b9d48e101bb80c5d6">wait_for_all_villagers</a> (<a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a> *data, int nb_villagers)</td></tr>
+<tr class="memdesc:ad33f43143143283b9d48e101bb80c5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">It waits for all the villagers to finish their work.  <a href="run__panoramix_8c.html#ad33f43143143283b9d48e101bb80c5d6">More...</a><br /></td></tr>
+<tr class="separator:ad33f43143143283b9d48e101bb80c5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e6fa8ec958fe39e31d9821baba3b25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run__panoramix_8c.html#ad8e6fa8ec958fe39e31d9821baba3b25">start_villagers</a> (<a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a> *data, int nb_villagers)</td></tr>
+<tr class="memdesc:ad8e6fa8ec958fe39e31d9821baba3b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates the druid thread and the villagers threads.  <a href="run__panoramix_8c.html#ad8e6fa8ec958fe39e31d9821baba3b25">More...</a><br /></td></tr>
+<tr class="separator:ad8e6fa8ec958fe39e31d9821baba3b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run__panoramix_8c.html#a75ecbf36c46f48cd164f7f7fa4bc243c">run_panoramix</a> (int *numbers)</td></tr>
+<tr class="memdesc:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a number of villagers, each of which will try to drink from the pot.  <a href="run__panoramix_8c.html#a75ecbf36c46f48cd164f7f7fa4bc243c">More...</a><br /></td></tr>
 <tr class="separator:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -114,6 +120,90 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It creates a number of villagers, each of which will try to drink from the pot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numbers</td><td>an array of integers containing the number of villagers, the number of potions, and the number of ingredients.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value is the number of the pot. </dd></dl>
+
+</div>
+</div>
+<a id="ad8e6fa8ec958fe39e31d9821baba3b25" name="ad8e6fa8ec958fe39e31d9821baba3b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e6fa8ec958fe39e31d9821baba3b25">&#9670;&nbsp;</a></span>start_villagers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int start_villagers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_villagers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It creates the druid thread and the villagers threads. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the array of villagers_data_t </td></tr>
+    <tr><td class="paramname">nb_villagers</td><td>the number of villagers to create</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the value 0. </dd></dl>
+
+</div>
+</div>
+<a id="ad33f43143143283b9d48e101bb80c5d6" name="ad33f43143143283b9d48e101bb80c5d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33f43143143283b9d48e101bb80c5d6">&#9670;&nbsp;</a></span>wait_for_all_villagers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wait_for_all_villagers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752">villagers_data_t</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_villagers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It waits for all the villagers to finish their work. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the array of villagers </td></tr>
+    <tr><td class="paramname">nb_villagers</td><td>the number of villagers in the village </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

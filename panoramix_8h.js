@@ -1,12 +1,12 @@
 var panoramix_8h =
 [
-    [ "data_s", "structdata__s.html", "structdata__s" ],
+    [ "villagers_data_s", "structvillagers__data__s.html", "structvillagers__data__s" ],
     [ "ARGS_NUMBER", "panoramix_8h.html#ab68b2ff297003bd90f1bb1a58d60bc69", null ],
     [ "EXIT_ERROR", "panoramix_8h.html#a036a316feca78ed68d2f2a88cbf6fa8c", null ],
     [ "EXIT_SUCCESS", "panoramix_8h.html#a687984f47d8cce148d1b914d2b79612a", null ],
     [ "args_type_t", "panoramix_8h.html#a713e63245a5828a6a3b1348019bfa6e2", null ],
-    [ "data_t", "panoramix_8h.html#abc127153841754ee8b7845321721d7e7", null ],
     [ "villager_sentance_type_t", "panoramix_8h.html#ad2eb1b8006daa670b6f3175c014205ed", null ],
+    [ "villagers_data_t", "panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752", null ],
     [ "args_type_e", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2", [
       [ "NB_VILLAGERS", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a97455e6f112e60937bc73da512ba61c1", null ],
       [ "POT_SIZE", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2af645f988f83799187b5420becc84c608", null ],
