@@ -31,6 +31,8 @@ typedef enum args_type_e {
 typedef struct villagers_data_s {
     pthread_t thread;
     int id;
+    pthread_mutex_t *mut;
+    int *numbers;
 } villagers_data_t;
 
 void print_usage(char *name);

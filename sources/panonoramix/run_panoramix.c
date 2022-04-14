@@ -9,64 +9,54 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/**
-* @brief It waits for all the villagers to finish their work
-*
-* @param data the array of villagers
-* @param nb_villagers the number of villagers in the village
-*/
-void wait_for_all_villagers(villagers_data_t *data, int nb_villagers)
+void wait_for_all_villagers(villagers_data_t *data)
 {
     int index = 1;
 
-    while (index < nb_villagers + 1) {
+    while (index < data->numbers[NB_VILLAGERS] + 1) {
         pthread_join(data[index].thread, NULL);
         index++;
     }
 }
 
-/**
-* @brief It creates the druid thread and the villagers threads
-*
-* @param data the array of villagers_data_t
-* @param nb_villagers the number of villagers to create
-*
-* @return the value 0.
-*/
-int start_villagers(villagers_data_t *data, int nb_villagers)
+int start_villagers(villagers_data_t *data)
 {
     int index = 1;
 
     pthread_create(&data[0].thread, NULL, &druid, NULL);
-    while (index < nb_villagers + 1) {
+    while (index < data->numbers[NB_VILLAGERS] + 1) {
         data[index].id = index - 1;
         pthread_create(&data[index].thread, NULL, &villager, &data[index]);
         index++;
     }
     return (0);
 }
+void *init_data(int *numbers)
+{
+    villagers_data_t *data;
+    pthread_mutex_t mut;
 
-/**
-* @brief It creates a number of villagers, each of which will try to drink from the pot
-*
-* @param numbers an array of integers containing the number of villagers, the
-* number of potions, and the number of ingredients.
-*
-* @return The return value is the number of the pot.
-*/
+    data = malloc(sizeof(villagers_data_t) * (numbers[NB_VILLAGERS] + 1));
+    if (data == NULL)
+        return (NULL);
+    pthread_mutex_init(&mut, NULL);
+    for (int i = 0; i < numbers[NB_VILLAGERS] + 1; i++) {
+        data[i].id = i;
+        data[i].mut = &mut;
+        data[i].numbers = numbers;
+    }
+    return (data);
+}
+
 int run_panoramix(int *numbers)
 {
-    villagers_data_t *data = NULL;
-    int nb_pot = numbers[POT_SIZE];
+    villagers_data_t *data = init_data(numbers);
 
-    (void)nb_pot;
-    data = malloc(sizeof(villagers_data_t) * (numbers[NB_VILLAGERS] + 1));
-    if (!data) {
-        fprintf(stderr, "Error: run_panoramix: malloc failed\n");
+    if (data == NULL)
         return (-1);
-    }
-    start_villagers(data, numbers[NB_VILLAGERS]);
-    wait_for_all_villagers(data, numbers[NB_VILLAGERS]);
+    start_villagers(data);
+    wait_for_all_villagers(data);
+    pthread_mutex_destroy(data->mut);
     free(data);
     return (0);
 }
