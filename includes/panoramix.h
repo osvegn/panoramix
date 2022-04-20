@@ -55,3 +55,4 @@ void *villager(void *d);
 void *druid(void *data);
 void print_villager_sentance(villager_sentance_type_t type, int id, int value);
 void print_druid_sentance(druid_sentance_type_t type, int value);
+void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut);
