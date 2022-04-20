@@ -9,6 +9,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/**
+* @brief It prints a message to the screen
+*
+* @param type The type of sentance the villager is saying.
+* @param id The id of the villager.
+* @param value The value of the sentance.
+*/
 void print_villager_sentance(villager_sentance_type_t type, int id, int value)
 {
     printf("Villager %i: ", id);
@@ -25,6 +32,16 @@ void print_villager_sentance(villager_sentance_type_t type, int id, int value)
     fflush(stdout);
 }
 
+/**
+* @brief It checks if there are any pots left, if there are, it decrements
+* the number of pots and the number of fights, and prints a message. If there
+* are no pots left, it prints a message and waits for the druid to
+* refill the pots
+*
+* @param data a pointer to a structure containing all the data needed by the
+* thread
+* @param nb_fight the number of fights left
+*/
 void villager_action(villagers_data_t *data, int *nb_fight)
 {
     if ((*data->nb_pots) > 0) {
@@ -39,9 +56,17 @@ void villager_action(villagers_data_t *data, int *nb_fight)
     }
 }
 
-void *villager(void *d)
+/**
+* @brief It's a loop that locks the mutex, checks if the number of refills
+* is greater than 0, then does some stuff, then unlocks the mutex
+*
+* @param _data the data passed to the thread
+*
+* @return a pointer to a void.
+*/
+void *villager(void *_data)
 {
-    villagers_data_t *data = d;
+    villagers_data_t *data = _data;
     int nb_fight = data->numbers[NB_FIGHTS];
 
     print_villager_sentance(VILLAGER_START, data->id, 0);
