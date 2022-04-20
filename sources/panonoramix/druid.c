@@ -8,6 +8,12 @@
 #include "panoramix.h"
 #include <stdio.h>
 
+/**
+* @brief It prints a message to the screen
+*
+* @param type The type of sentance to print.
+* @param value the number of refills the druid can make
+*/
 void print_druid_sentance(druid_sentance_type_t type, int value)
 {
     char *str = "Druid: Ah! Yes, yes, I'm awake! Working on it! Beware I can ";
@@ -21,9 +27,18 @@ void print_druid_sentance(druid_sentance_type_t type, int value)
     fflush(stdout);
 }
 
-void *druid(void *d)
+/**
+* @brief The druid waits for the villagers to finish drinking, then refills
+* the pot and wakes up the villagers
+*
+* @param _data pointer to data structure containing all the information needed
+* by the druid
+*
+* @return a pointer to a void.
+*/
+void *druid(void *_data)
 {
-    villagers_data_t *data = d;
+    villagers_data_t *data = _data;
 
     print_druid_sentance(DRUID_START, 0);
     while (data->numbers[NB_REFILLS] > 0) {
