@@ -54,3 +54,4 @@ int run_panoramix(int *numbers);
 void *villager(void *d);
 void *druid(void *data);
 void print_villager_sentance(villager_sentance_type_t type, int id, int value);
+void print_druid_sentance(druid_sentance_type_t type, int value);

@@ -21,6 +21,7 @@ SRC		=	sources/panonoramix/args_management.c \
 TSRC		=	$(SRC) \
 				tests/test_args_management.c \
 				tests/test_print_villager_sentance.c \
+				tests/test_druid.c \
 
 OBJ		=	$(SRC:.c=.o) \
 			$(MAIN:.c=.o)
