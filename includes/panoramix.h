@@ -8,10 +8,18 @@
 #pragma once
 
 #include <pthread.h>
+#include <semaphore.h>
+#include <stdbool.h>
 
 #define EXIT_SUCCESS 0
 #define EXIT_ERROR 84
 #define ARGS_NUMBER 4
+
+typedef enum druid_sentance_type_e {
+    DRUID_START,
+    DRUID_REFILL,
+    DRUID_SLEEP,
+} druid_sentance_type_t;
 
 typedef enum villager_sentance_type_e {
     VILLAGER_START,
@@ -32,7 +40,11 @@ typedef struct villagers_data_s {
     pthread_t thread;
     int id;
     pthread_mutex_t *mut;
+    sem_t *sem;
+    sem_t *sem2;
+    bool villagers_status;
     int *numbers;
+    int *nb_pots;
 } villagers_data_t;
 
 void print_usage(char *name);
