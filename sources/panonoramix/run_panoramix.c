@@ -76,6 +76,7 @@ int run_panoramix(int *numbers)
     pthread_mutex_destroy(data->mut);
     sem_destroy(data->sem);
     sem_destroy(data->sem2);
+    free(data->nb_pots);
     free(data);
     return (0);
 }
