@@ -156,14 +156,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1b29f381a38a638ffb6b6c681f6b7898"><td class="mdescLeft">&#160;</td><td class="mdescRight">It checks if the number of arguments is correct, and if so, it converts them to integers and stores them in the array pointed to by <code>number</code>  <a href="panoramix_8h.html#a1b29f381a38a638ffb6b6c681f6b7898">More...</a><br /></td></tr>
 <tr class="separator:a1b29f381a38a638ffb6b6c681f6b7898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ff0cf65b0acf0a2b7cf816e4a06820"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820">panoramix</a> (int ac, char **av)</td></tr>
+<tr class="memdesc:a42ff0cf65b0acf0a2b7cf816e4a06820"><td class="mdescLeft">&#160;</td><td class="mdescRight">It takes the arguments from the command line, checks them, and then runs the panoramix function.  <a href="panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820">More...</a><br /></td></tr>
 <tr class="separator:a42ff0cf65b0acf0a2b7cf816e4a06820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c">run_panoramix</a> (int *numbers)</td></tr>
+<tr class="memdesc:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a bunch of threads, waits for them to finish, and then cleans up.  <a href="panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c">More...</a><br /></td></tr>
 <tr class="separator:a75ecbf36c46f48cd164f7f7fa4bc243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36769f8e54886027cf07bdb1a811e66"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#af36769f8e54886027cf07bdb1a811e66">villager</a> (void *d)</td></tr>
+<tr class="memdesc:af36769f8e54886027cf07bdb1a811e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">It's a loop that locks the mutex, checks if the number of refills is greater than 0, then does some stuff, then unlocks the mutex.  <a href="panoramix_8h.html#af36769f8e54886027cf07bdb1a811e66">More...</a><br /></td></tr>
 <tr class="separator:af36769f8e54886027cf07bdb1a811e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea338e19fed61a248209bbe567c154c8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#aea338e19fed61a248209bbe567c154c8">druid</a> (void *data)</td></tr>
+<tr class="memdesc:aea338e19fed61a248209bbe567c154c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The druid waits for the villagers to finish drinking, then refills the pot and wakes up the villagers.  <a href="panoramix_8h.html#aea338e19fed61a248209bbe567c154c8">More...</a><br /></td></tr>
 <tr class="separator:aea338e19fed61a248209bbe567c154c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb19dabf703201d3c182b05a69c1a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a4eb19dabf703201d3c182b05a69c1a9d">print_villager_sentance</a> (<a class="el" href="panoramix_8h.html#ad2eb1b8006daa670b6f3175c014205ed">villager_sentance_type_t</a> type, int id, int value)</td></tr>
+<tr class="memdesc:a4eb19dabf703201d3c182b05a69c1a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">It prints a message to the screen.  <a href="panoramix_8h.html#a4eb19dabf703201d3c182b05a69c1a9d">More...</a><br /></td></tr>
 <tr class="separator:a4eb19dabf703201d3c182b05a69c1a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -383,11 +388,20 @@ Functions</h2></td></tr>
           <td class="memname">void * druid </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>_data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The druid waits for the villagers to finish drinking, then refills the pot and wakes up the villagers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_data</td><td>pointer to data structure containing all the information needed by the druid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to a void. </dd></dl>
 
 </div>
 </div>
@@ -416,6 +430,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It takes the arguments from the command line, checks them, and then runs the panoramix function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ac</td><td>the number of arguments passed to the program </td></tr>
+    <tr><td class="paramname">av</td><td>the array of strings passed to the program</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value of the function. </dd></dl>
 
 </div>
 </div>
@@ -477,6 +501,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>It prints a message to the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of sentance the villager is saying. </td></tr>
+    <tr><td class="paramname">id</td><td>The id of the villager. </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the sentance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a75ecbf36c46f48cd164f7f7fa4bc243c" name="a75ecbf36c46f48cd164f7f7fa4bc243c"></a>
@@ -495,6 +529,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>It creates a bunch of threads, waits for them to finish, and then cleans up. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numbers</td><td>an array of integers, each integer is a number passed as parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="af36769f8e54886027cf07bdb1a811e66" name="af36769f8e54886027cf07bdb1a811e66"></a>
@@ -507,11 +550,20 @@ Functions</h2></td></tr>
           <td class="memname">void * villager </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
+          <td class="paramname"><em>_data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It's a loop that locks the mutex, checks if the number of refills is greater than 0, then does some stuff, then unlocks the mutex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_data</td><td>the data passed to the thread</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to a void. </dd></dl>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['druid_0',['druid',['../panoramix_8h.html#aea338e19fed61a248209bbe567c154c8',1,'druid(void *data):&#160;druid.c'],['../druid_8c.html#a25bb833b9ca9874bfe66442640df7d43',1,'druid(void *d):&#160;druid.c']]],
+  ['druid_0',['druid',['../panoramix_8h.html#aea338e19fed61a248209bbe567c154c8',1,'druid(void *data):&#160;druid.c'],['../druid_8c.html#a66ac39b6861a4d25d4b47fd0f72e8e85',1,'druid(void *_data):&#160;druid.c']]],
   ['druid_2ec_1',['druid.c',['../druid_8c.html',1,'']]],
   ['druid_5frefill_2',['DRUID_REFILL',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41a0589db407346d1238f2c94c9f2714c93',1,'panoramix.h']]],
   ['druid_5fsentance_5ftype_5fe_3',['druid_sentance_type_e',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41',1,'panoramix.h']]],

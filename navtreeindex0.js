@@ -9,7 +9,7 @@ var NAVTREEINDEX0 =
 "dir_56c7fe78602a4b1a734768dce80591c4.html":[2,0,1,0],
 "dir_59425e443f801f1f2fd8bbe4959a3ccf.html":[2,0,2],
 "druid_8c.html":[2,0,1,0,1],
-"druid_8c.html#a25bb833b9ca9874bfe66442640df7d43":[2,0,1,0,1,0],
+"druid_8c.html#a66ac39b6861a4d25d4b47fd0f72e8e85":[2,0,1,0,1,0],
 "druid_8c.html#af4e351c9c2c6a6edd37dc732f7664595":[2,0,1,0,1,1],
 "files.html":[2,0],
 "functions.html":[1,2,0],
@@ -89,5 +89,5 @@ var NAVTREEINDEX0 =
 "villager_8c.html":[2,0,1,0,5],
 "villager_8c.html#a31c52158d15cff2f269e33e384944d14":[2,0,1,0,5,2],
 "villager_8c.html#a4eb19dabf703201d3c182b05a69c1a9d":[2,0,1,0,5,0],
-"villager_8c.html#af36769f8e54886027cf07bdb1a811e66":[2,0,1,0,5,1]
+"villager_8c.html#ac4005b92db2948e8a84c6b31ce6d36bf":[2,0,1,0,5,1]
 };
