@@ -10,6 +10,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/**
+* @brief It waits for all the villagers to finish their work
+*
+* @param data the array of villagers_data_t
+*/
 void wait_for_all_villagers(villagers_data_t *data)
 {
     int index = 1;
@@ -24,6 +29,13 @@ void wait_for_all_villagers(villagers_data_t *data)
     pthread_join(data[0].thread, NULL);
 }
 
+/**
+* @brief It creates the druid thread and the villagers threads
+*
+* @param data the array of villagers_data_t
+*
+* @return 0.
+*/
 int start_villagers(villagers_data_t *data)
 {
     int index = 1;
@@ -37,6 +49,18 @@ int start_villagers(villagers_data_t *data)
     return (0);
 }
 
+/**
+* @brief It initializes the data structure that will be passed to the threads
+*
+* @param numbers an array containing the number of villagers, the number of
+* pots, the number of fights, and the number of refills.
+* @param sem a semaphore that will be used to synchronize the villagers
+* @param sem2 This semaphore is used to make sure that the villagers are all in
+* the village before the druid can start her work.
+* @param mut a mutex to protect the pot
+*
+* @return A pointer to a struct containing all the data needed for the threads.
+*/
 void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
 {
     villagers_data_t *data;
@@ -62,6 +86,15 @@ void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
     return (data);
 }
 
+/**
+* @brief It creates a bunch of threads, waits for them to finish, and then
+* cleans up
+*
+* @param numbers an array of integers, each integer is a number passed as
+* parameter.
+*
+* @return 0 on success, -1 otherwise.
+*/
 int run_panoramix(int *numbers)
 {
     sem_t sem;
