@@ -15,7 +15,7 @@ void print_druid_sentance(druid_sentance_type_t type, int value)
     if (type == DRUID_START)
         printf("Druid: I'm ready... but sleepy...\n");
     if (type == DRUID_REFILL)
-        printf("%sonly make %i more refills after this one.\n", value, str);
+        printf("%sonly make %i more refills after this one.\n", str, value);
     if (type == DRUID_SLEEP)
         printf("Druid: I'm out of viscum. I'm going back to... zZz\n");
     fflush(stdout);
