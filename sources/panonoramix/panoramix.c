@@ -7,6 +7,15 @@
 
 #include "panoramix.h"
 
+/**
+* @brief It takes the arguments from the command line, checks them, and then
+* runs the panoramix function
+*
+* @param ac the number of arguments passed to the program
+* @param av the array of strings passed to the program
+*
+* @return The return value of the function.
+*/
 int panoramix(int ac, char **av)
 {
     int rvalue = 0;
