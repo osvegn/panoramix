@@ -31,13 +31,12 @@ int start_villagers(villagers_data_t *data)
     pthread_create(&data[0].thread, NULL, &druid, &data[0]);
     while (index < data->numbers[NB_VILLAGERS] + 1) {
         data[index].id = index - 1;
-        if (pthread_create(&data[index].thread, NULL, &villager, &data[index]) < 0) {
-            perror("Error: pthread_create");
-        }
+        pthread_create(&data[index].thread, NULL, &villager, &data[index]);
         index++;
     }
     return (0);
 }
+
 void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
 {
     villagers_data_t *data;
