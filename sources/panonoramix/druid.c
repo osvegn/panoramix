@@ -10,10 +10,12 @@
 
 void print_druid_sentance(druid_sentance_type_t type, int value)
 {
+    char *str = "Druid: Ah! Yes, yes, I'm awake! Working on it! Beware I can ";
+
     if (type == DRUID_START)
         printf("Druid: I'm ready... but sleepy...\n");
     if (type == DRUID_REFILL)
-        printf("Druid: Ah! Yes, yes, I'm awake! Working on it! Beware I can only make %i more refills after this one.\n", value);
+        printf("%sonly make %i more refills after this one.\n", value, str);
     if (type == DRUID_SLEEP)
         printf("Druid: I'm out of viscum. I'm going back to... zZz\n");
     fflush(stdout);
