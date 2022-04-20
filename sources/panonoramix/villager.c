@@ -11,17 +11,32 @@
 
 void print_villager_sentance(villager_sentance_type_t type, int id, int value)
 {
+    printf("Villager %i: ", id);
     if (type == VILLAGER_START)
-        printf("Villager %i: Going into battle!\n", id);
+        printf("Going into battle!\n");
     if (type == VILLAGER_DRINK)
-        printf("Villager %i: I need a drink... I see %i servings left.\n", id, value);
+        printf("I need a drink... I see %i servings left.\n", value);
     if (type == VILLAGER_FIGHT)
-        printf("Villager %i: Take that roman scum! Only %i left.\n", id, value);
+        printf("Take that roman scum! Only %i left.\n", value);
     if (type == VILLAGER_REFILL)
-        printf("Villager %i: Hey Pano wake up! We need more potion.\n", id);
+        printf("Hey Pano wake up! We need more potion.\n");
     if (type == VILLAGER_DONE)
-        printf("Villager %i: I'm going to sleep now.\n", id);
+        printf("I'm going to sleep now.\n");
     fflush(stdout);
+}
+
+void villager_action(villagers_data_t *data, int *nb_fight)
+{
+    if ((*data->nb_pots) > 0) {
+        print_villager_sentance(VILLAGER_DRINK, data->id, (*data->nb_pots));
+        (*data->nb_pots)--;
+        (*nb_fight)--;
+        print_villager_sentance(VILLAGER_FIGHT, data->id, *nb_fight);
+    } else {
+        print_villager_sentance(VILLAGER_REFILL, data->id, 0);
+        sem_post(data->sem);
+        sem_wait(data->sem2);
+    }
 }
 
 void *villager(void *d)
@@ -36,16 +51,7 @@ void *villager(void *d)
             pthread_mutex_unlock(data->mut);
             return (NULL);
         }
-        if ((*data->nb_pots) > 0) {
-            print_villager_sentance(VILLAGER_DRINK, data->id, (*data->nb_pots));
-            (*data->nb_pots)--;
-            nb_fight--;
-            print_villager_sentance(VILLAGER_FIGHT, data->id, nb_fight);
-        } else {
-            print_villager_sentance(VILLAGER_REFILL, data->id, 0);
-            sem_post(data->sem);
-            sem_wait(data->sem2);
-        }
+        villager_action(data, &nb_fight);
         pthread_mutex_unlock(data->mut);
     }
     print_villager_sentance(VILLAGER_DONE, data->id, 0);
