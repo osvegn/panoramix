@@ -10,5 +10,6 @@ var searchData=
   ['villager_5fsentance_5ftype_5ft_7',['villager_sentance_type_t',['../panoramix_8h.html#ad2eb1b8006daa670b6f3175c014205ed',1,'panoramix.h']]],
   ['villager_5fstart_8',['VILLAGER_START',['../panoramix_8h.html#a80aecd613f72c5580c5dc0c975d6d980af5fa306b0086e390cf524dde51870f9c',1,'panoramix.h']]],
   ['villagers_5fdata_5fs_9',['villagers_data_s',['../structvillagers__data__s.html',1,'']]],
-  ['villagers_5fdata_5ft_10',['villagers_data_t',['../panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752',1,'panoramix.h']]]
+  ['villagers_5fdata_5ft_10',['villagers_data_t',['../panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752',1,'panoramix.h']]],
+  ['villagers_5fstatus_11',['villagers_status',['../structvillagers__data__s.html#a154c23e6e808380de57f5ab81a41d407',1,'villagers_data_s']]]
 ];

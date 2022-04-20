@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['nb_5ffights_0',['NB_FIGHTS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a6db3c8104c7cec1712536544c1e20e11',1,'panoramix.h']]],
-  ['nb_5frefills_1',['NB_REFILLS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2afc049d83c2ffec8c0b10b3f6c444e06b',1,'panoramix.h']]],
-  ['nb_5fvillagers_2',['NB_VILLAGERS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a97455e6f112e60937bc73da512ba61c1',1,'panoramix.h']]]
+  ['druid_5frefill_0',['DRUID_REFILL',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41a0589db407346d1238f2c94c9f2714c93',1,'panoramix.h']]],
+  ['druid_5fsleep_1',['DRUID_SLEEP',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41aba7a2b275b385d6660073ed3b870b06d',1,'panoramix.h']]],
+  ['druid_5fstart_2',['DRUID_START',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41a5ec37d043860889630a190cdcd0bfe0e',1,'panoramix.h']]]
 ];

@@ -4,10 +4,10 @@ var indexSectionsWithContent =
   1: "v",
   2: "admprtv",
   3: "adimprstvw",
-  4: "imnt",
-  5: "av",
-  6: "av",
-  7: "npv",
+  4: "imnstv",
+  5: "adv",
+  6: "adv",
+  7: "dnpv",
   8: "ae",
   9: "p"
 };

@@ -5,6 +5,7 @@ var panoramix_8h =
     [ "EXIT_ERROR", "panoramix_8h.html#a036a316feca78ed68d2f2a88cbf6fa8c", null ],
     [ "EXIT_SUCCESS", "panoramix_8h.html#a687984f47d8cce148d1b914d2b79612a", null ],
     [ "args_type_t", "panoramix_8h.html#a713e63245a5828a6a3b1348019bfa6e2", null ],
+    [ "druid_sentance_type_t", "panoramix_8h.html#a0b6dbe3d4c09cb605f1d3a91ae47d11c", null ],
     [ "villager_sentance_type_t", "panoramix_8h.html#ad2eb1b8006daa670b6f3175c014205ed", null ],
     [ "villagers_data_t", "panoramix_8h.html#adc1d0f21dd1c981fb0ed99e9b366f752", null ],
     [ "args_type_e", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2", [
@@ -12,6 +13,11 @@ var panoramix_8h =
       [ "POT_SIZE", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2af645f988f83799187b5420becc84c608", null ],
       [ "NB_FIGHTS", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a6db3c8104c7cec1712536544c1e20e11", null ],
       [ "NB_REFILLS", "panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2afc049d83c2ffec8c0b10b3f6c444e06b", null ]
+    ] ],
+    [ "druid_sentance_type_e", "panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41", [
+      [ "DRUID_START", "panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41a5ec37d043860889630a190cdcd0bfe0e", null ],
+      [ "DRUID_REFILL", "panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41a0589db407346d1238f2c94c9f2714c93", null ],
+      [ "DRUID_SLEEP", "panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41aba7a2b275b385d6660073ed3b870b06d", null ]
     ] ],
     [ "villager_sentance_type_e", "panoramix_8h.html#a80aecd613f72c5580c5dc0c975d6d980", [
       [ "VILLAGER_START", "panoramix_8h.html#a80aecd613f72c5580c5dc0c975d6d980af5fa306b0086e390cf524dde51870f9c", null ],
