@@ -40,8 +40,8 @@ Test(druid, test_druid_available_without_refill, .init=cr_redirect_stdout)
     sem_post(&sem);
     pthread_join(data[0].thread, NULL);
     pthread_mutex_destroy(data->mut);
-    sem_destroy(data->sem);
-    sem_destroy(data->sem2);
+    sem_destroy(data->need_refill);
+    sem_destroy(data->has_refill);
     free(data->nb_pots);
     free(data);
     cr_assert_stdout_eq_str("Druid: I'm ready... but sleepy...\nDruid: I'm out of viscum. I'm going back to... zZz\n");
@@ -59,8 +59,8 @@ Test(druid, test_druid_available_with_refill, .init=cr_redirect_stdout)
     sem_post(&sem);
     pthread_join(data[0].thread, NULL);
     pthread_mutex_destroy(data->mut);
-    sem_destroy(data->sem);
-    sem_destroy(data->sem2);
+    sem_destroy(data->need_refill);
+    sem_destroy(data->has_refill);
     free(data->nb_pots);
     free(data);
     cr_assert_stdout_eq_str("Druid: I'm ready... but sleepy...\nDruid: Ah! Yes, yes, I'm awake! Working on it! Beware I can only make 0 more refills after this one.\nDruid: I'm out of viscum. I'm going back to... zZz\n");
