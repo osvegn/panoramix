@@ -11,10 +11,10 @@
 /**
 * @brief It prints a message to the screen
 *
-* @param type The type of sentance to print.
+* @param type The type of sentence to print.
 * @param value the number of refills the druid can make
 */
-void print_druid_sentance(druid_sentance_type_t type, int value)
+void print_druid_sentence(druid_sentence_type_t type, int value)
 {
     char *str = "Druid: Ah! Yes, yes, I'm awake! Working on it! Beware I can ";
 
@@ -40,20 +40,20 @@ void *druid(void *_data)
 {
     villagers_data_t *data = _data;
 
-    print_druid_sentance(DRUID_START, 0);
+    print_druid_sentence(DRUID_START, 0);
     while (data->numbers[NB_REFILLS] > 0) {
         sem_wait(data->sem);
         if (data->villagers_status == true) {
             data->numbers[NB_REFILLS]--;
             (*data->nb_pots) = data->numbers[POT_SIZE];
-            print_druid_sentance(DRUID_REFILL, data->numbers[NB_REFILLS]);
+            print_druid_sentence(DRUID_REFILL, data->numbers[NB_REFILLS]);
             sem_post(data->sem2);
         } else {
-            print_druid_sentance(DRUID_SLEEP, 0);
+            print_druid_sentence(DRUID_SLEEP, 0);
             sem_post(data->sem2);
             return (NULL);
         }
     }
-    print_druid_sentance(DRUID_SLEEP, 0);
+    print_druid_sentence(DRUID_SLEEP, 0);
     return (NULL);
 }

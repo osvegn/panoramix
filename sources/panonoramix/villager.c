@@ -9,26 +9,41 @@
 #include <stdio.h>
 #include <unistd.h>
 
+static const char *sentences[5] = {
+    "Villager %i: Going into battle!\n",
+    "Villager %i: I need a drink... I see %i servings left.\n",
+    "Villager %i: Hey Pano wake up! We need more potion.\n",
+    "Villager %i: Take that roman scum! Only %i left.\n",
+    "Villager %i: I'm going to sleep now.\n"
+};
+
 /**
 * @brief It prints a message to the screen
 *
-* @param type The type of sentance the villager is saying.
+* @param type The type of sentence the villager is saying.
 * @param id The id of the villager.
-* @param value The value of the sentance.
+* @param value The value of the sentence.
 */
-void print_villager_sentance(villager_sentance_type_t type, int id, int value)
+void print_villager_sentence(villager_sentence_type_t type, int id, int value)
 {
-    printf("Villager %i: ", id);
-    if (type == VILLAGER_START)
-        printf("Going into battle!\n");
-    if (type == VILLAGER_DRINK)
-        printf("I need a drink... I see %i servings left.\n", value);
-    if (type == VILLAGER_FIGHT)
-        printf("Take that roman scum! Only %i left.\n", value);
-    if (type == VILLAGER_REFILL)
-        printf("Hey Pano wake up! We need more potion.\n");
-    if (type == VILLAGER_DONE)
-        printf("I'm going to sleep now.\n");
+    switch (type)
+    {
+    case VILLAGER_START:
+        printf(sentences[type], id);
+        break;
+    case VILLAGER_DRINK:
+        printf(sentences[type], id, value);
+        break;
+    case VILLAGER_REFILL:
+        printf(sentences[type], id);
+        break;
+    case VILLAGER_FIGHT:
+        printf(sentences[type], id, value);
+        break;
+    case VILLAGER_DONE:
+        printf(sentences[type], id);
+        break;
+    }
     fflush(stdout);
 }
 
@@ -45,12 +60,12 @@ void print_villager_sentance(villager_sentance_type_t type, int id, int value)
 void villager_action(villagers_data_t *data, int *nb_fight)
 {
     if ((*data->nb_pots) > 0) {
-        print_villager_sentance(VILLAGER_DRINK, data->id, (*data->nb_pots));
+        print_villager_sentence(VILLAGER_DRINK, data->id, (*data->nb_pots));
         (*data->nb_pots)--;
         (*nb_fight)--;
-        print_villager_sentance(VILLAGER_FIGHT, data->id, *nb_fight);
+        print_villager_sentence(VILLAGER_FIGHT, data->id, *nb_fight);
     } else {
-        print_villager_sentance(VILLAGER_REFILL, data->id, 0);
+        print_villager_sentence(VILLAGER_REFILL, data->id, 0);
         sem_post(data->sem);
         sem_wait(data->sem2);
     }
@@ -69,7 +84,7 @@ void *villager(void *_data)
     villagers_data_t *data = _data;
     int nb_fight = data->numbers[NB_FIGHTS];
 
-    print_villager_sentance(VILLAGER_START, data->id, 0);
+    print_villager_sentence(VILLAGER_START, data->id, 0);
     while (nb_fight > 0) {
         pthread_mutex_lock(data->mut);
         if (data->numbers[NB_REFILLS] <= 0) {
@@ -79,6 +94,6 @@ void *villager(void *_data)
         villager_action(data, &nb_fight);
         pthread_mutex_unlock(data->mut);
     }
-    print_villager_sentance(VILLAGER_DONE, data->id, 0);
+    print_villager_sentence(VILLAGER_DONE, data->id, 0);
     return (NULL);
 }
