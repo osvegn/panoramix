@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['druid_5fsentance_5ftype_5fe_0',['druid_sentance_type_e',['../panoramix_8h.html#a1a0b668c53b3435253e3e1a24c2c9b41',1,'panoramix.h']]]
+  ['druid_5fsentence_5ftype_5fe_0',['druid_sentence_type_e',['../panoramix_8h.html#a2088b8e4c8e7d274feb05ce984d6bf52',1,'panoramix.h']]]
 ];

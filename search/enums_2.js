@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['villager_5fsentance_5ftype_5fe_0',['villager_sentance_type_e',['../panoramix_8h.html#a80aecd613f72c5580c5dc0c975d6d980',1,'panoramix.h']]]
+  ['villager_5fsentence_5ftype_5fe_0',['villager_sentence_type_e',['../panoramix_8h.html#a85b8acb3f405dd2038178314eb8617e9',1,'panoramix.h']]]
 ];
