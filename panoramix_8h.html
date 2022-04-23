@@ -173,9 +173,9 @@ Functions</h2></td></tr>
 <tr class="memitem:afc3fb2c2e3e2d4ff3e8221a9df130ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#afc3fb2c2e3e2d4ff3e8221a9df130ecb">print_druid_sentence</a> (<a class="el" href="panoramix_8h.html#a4dbe900f6648e29ac3585cf86507a83a">druid_sentence_type_t</a> type, int value)</td></tr>
 <tr class="memdesc:afc3fb2c2e3e2d4ff3e8221a9df130ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">It prints a message to the screen.  <a href="panoramix_8h.html#afc3fb2c2e3e2d4ff3e8221a9df130ecb">More...</a><br /></td></tr>
 <tr class="separator:afc3fb2c2e3e2d4ff3e8221a9df130ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57e8b39933978c3ac58b456596a17a1c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a57e8b39933978c3ac58b456596a17a1c">init_data</a> (int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)</td></tr>
-<tr class="memdesc:a57e8b39933978c3ac58b456596a17a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It initializes the data structure that will be passed to the threads.  <a href="panoramix_8h.html#a57e8b39933978c3ac58b456596a17a1c">More...</a><br /></td></tr>
-<tr class="separator:a57e8b39933978c3ac58b456596a17a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7812b78798034cde4e7c2aaba308964d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="panoramix_8h.html#a7812b78798034cde4e7c2aaba308964d">init_data</a> (int *numbers, sem_t *need_refill, sem_t *has_refill, pthread_mutex_t *mut)</td></tr>
+<tr class="memdesc:a7812b78798034cde4e7c2aaba308964d"><td class="mdescLeft">&#160;</td><td class="mdescRight">It initializes the data structure that will be passed to the threads.  <a href="panoramix_8h.html#a7812b78798034cde4e7c2aaba308964d">More...</a><br /></td></tr>
+<tr class="separator:a7812b78798034cde4e7c2aaba308964d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab68b2ff297003bd90f1bb1a58d60bc69" name="ab68b2ff297003bd90f1bb1a58d60bc69"></a>
@@ -411,8 +411,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a57e8b39933978c3ac58b456596a17a1c" name="a57e8b39933978c3ac58b456596a17a1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57e8b39933978c3ac58b456596a17a1c">&#9670;&nbsp;</a></span>init_data()</h2>
+<a id="a7812b78798034cde4e7c2aaba308964d" name="a7812b78798034cde4e7c2aaba308964d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7812b78798034cde4e7c2aaba308964d">&#9670;&nbsp;</a></span>init_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,13 +427,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">sem_t *&#160;</td>
-          <td class="paramname"><em>sem</em>, </td>
+          <td class="paramname"><em>need_refill</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">sem_t *&#160;</td>
-          <td class="paramname"><em>sem2</em>, </td>
+          <td class="paramname"><em>has_refill</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -453,8 +453,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">numbers</td><td>an array containing the number of villagers, the number of pots, the number of fights, and the number of refills. </td></tr>
-    <tr><td class="paramname">sem</td><td>a semaphore that will be used to synchronize the villagers </td></tr>
-    <tr><td class="paramname">sem2</td><td>This semaphore is used to make sure that the villagers are all in the village before the druid can start her work. </td></tr>
+    <tr><td class="paramname">need_refill</td><td>a semaphore that will be used to synchronize the villagers </td></tr>
+    <tr><td class="paramname">has_refill</td><td>This semaphore is used to make sure that the villagers are all in the village before the druid can start her work. </td></tr>
     <tr><td class="paramname">mut</td><td>a mutex to protect the pot</td></tr>
   </table>
   </dd>

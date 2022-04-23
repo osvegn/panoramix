@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main.c']]],
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
-  ['mut_2',['mut',['../structvillagers__data__s.html#a415eef161b79932cf513178e34e0aa7b',1,'villagers_data_s']]]
+  ['id_0',['id',['../structvillagers__data__s.html#a7441ef0865bcb3db9b8064dd7375c1ea',1,'villagers_data_s']]],
+  ['init_5fdata_1',['init_data',['../panoramix_8h.html#a7812b78798034cde4e7c2aaba308964d',1,'init_data(int *numbers, sem_t *need_refill, sem_t *has_refill, pthread_mutex_t *mut):&#160;run_panoramix.c'],['../run__panoramix_8c.html#a7812b78798034cde4e7c2aaba308964d',1,'init_data(int *numbers, sem_t *need_refill, sem_t *has_refill, pthread_mutex_t *mut):&#160;run_panoramix.c']]]
 ];

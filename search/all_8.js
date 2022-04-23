@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sem_0',['sem',['../structvillagers__data__s.html#a5c905d8d60d9e4d58e9a4a5ec07ec44c',1,'villagers_data_s']]],
-  ['sem2_1',['sem2',['../structvillagers__data__s.html#a9c7e1a74c76619823ae0560683ff5a5b',1,'villagers_data_s']]],
-  ['start_5fvillagers_2',['start_villagers',['../run__panoramix_8c.html#a4db3573a92fd9b7153468d6002b711e3',1,'run_panoramix.c']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['run_5fpanoramix_1',['run_panoramix',['../panoramix_8h.html#a75ecbf36c46f48cd164f7f7fa4bc243c',1,'run_panoramix(int *numbers):&#160;run_panoramix.c'],['../run__panoramix_8c.html#a75ecbf36c46f48cd164f7f7fa4bc243c',1,'run_panoramix(int *numbers):&#160;run_panoramix.c']]],
+  ['run_5fpanoramix_2ec_2',['run_panoramix.c',['../run__panoramix_8c.html',1,'']]]
 ];

@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['panoramix_0',['panoramix',['../md__r_e_a_d_m_e.html',1,'(Global Namespace)'],['../panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820',1,'panoramix(int ac, char **av):&#160;panoramix.c'],['../panoramix_8c.html#a42ff0cf65b0acf0a2b7cf816e4a06820',1,'panoramix(int ac, char **av):&#160;panoramix.c']]],
-  ['panoramix_2ec_1',['panoramix.c',['../panoramix_8c.html',1,'']]],
-  ['panoramix_2eh_2',['panoramix.h',['../panoramix_8h.html',1,'']]],
-  ['pot_5fsize_3',['POT_SIZE',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2af645f988f83799187b5420becc84c608',1,'panoramix.h']]],
-  ['print_5fdruid_5fsentence_4',['print_druid_sentence',['../panoramix_8h.html#afc3fb2c2e3e2d4ff3e8221a9df130ecb',1,'print_druid_sentence(druid_sentence_type_t type, int value):&#160;druid.c'],['../druid_8c.html#afc3fb2c2e3e2d4ff3e8221a9df130ecb',1,'print_druid_sentence(druid_sentence_type_t type, int value):&#160;druid.c']]],
-  ['print_5fusage_5',['print_usage',['../panoramix_8h.html#a3cf97aeec93f08a91c286a5926f19679',1,'print_usage(char *name):&#160;print_usage.c'],['../print__usage_8c.html#a3cf97aeec93f08a91c286a5926f19679',1,'print_usage(char *name):&#160;print_usage.c']]],
-  ['print_5fusage_2ec_6',['print_usage.c',['../print__usage_8c.html',1,'']]],
-  ['print_5fvillager_5fsentence_7',['print_villager_sentence',['../panoramix_8h.html#a1fb4aa90e6888612f937430c8b56b2f9',1,'print_villager_sentence(villager_sentence_type_t type, int id, int value):&#160;villager.c'],['../villager_8c.html#a1fb4aa90e6888612f937430c8b56b2f9',1,'print_villager_sentence(villager_sentence_type_t type, int id, int value):&#160;villager.c']]]
+  ['nb_5ffights_0',['NB_FIGHTS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a6db3c8104c7cec1712536544c1e20e11',1,'panoramix.h']]],
+  ['nb_5fpots_1',['nb_pots',['../structvillagers__data__s.html#a1baa0a2d9fd782cf9f7eda0038c4b47c',1,'villagers_data_s']]],
+  ['nb_5frefills_2',['NB_REFILLS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2afc049d83c2ffec8c0b10b3f6c444e06b',1,'panoramix.h']]],
+  ['nb_5fvillagers_3',['NB_VILLAGERS',['../panoramix_8h.html#ac38ade5da542ca2c0435b2fbf8279ef2a97455e6f112e60937bc73da512ba61c1',1,'panoramix.h']]],
+  ['need_5frefill_4',['need_refill',['../structvillagers__data__s.html#a0e2bbcc4b9180f88f352804cb3f938cd',1,'villagers_data_s']]],
+  ['numbers_5',['numbers',['../structvillagers__data__s.html#aa15b7cb9fa72e17c8e99573e3aaa2bd7',1,'villagers_data_s']]]
 ];

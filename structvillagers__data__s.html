@@ -99,10 +99,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a7441ef0865bcb3db9b8064dd7375c1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415eef161b79932cf513178e34e0aa7b"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a415eef161b79932cf513178e34e0aa7b">mut</a></td></tr>
 <tr class="separator:a415eef161b79932cf513178e34e0aa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c905d8d60d9e4d58e9a4a5ec07ec44c"><td class="memItemLeft" align="right" valign="top">sem_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a5c905d8d60d9e4d58e9a4a5ec07ec44c">sem</a></td></tr>
-<tr class="separator:a5c905d8d60d9e4d58e9a4a5ec07ec44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c7e1a74c76619823ae0560683ff5a5b"><td class="memItemLeft" align="right" valign="top">sem_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a9c7e1a74c76619823ae0560683ff5a5b">sem2</a></td></tr>
-<tr class="separator:a9c7e1a74c76619823ae0560683ff5a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2bbcc4b9180f88f352804cb3f938cd"><td class="memItemLeft" align="right" valign="top">sem_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a0e2bbcc4b9180f88f352804cb3f938cd">need_refill</a></td></tr>
+<tr class="separator:a0e2bbcc4b9180f88f352804cb3f938cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f20ebd5443105ca5b496dc7fed8fef8"><td class="memItemLeft" align="right" valign="top">sem_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a6f20ebd5443105ca5b496dc7fed8fef8">has_refill</a></td></tr>
+<tr class="separator:a6f20ebd5443105ca5b496dc7fed8fef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a154c23e6e808380de57f5ab81a41d407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#a154c23e6e808380de57f5ab81a41d407">villagers_status</a></td></tr>
 <tr class="separator:a154c23e6e808380de57f5ab81a41d407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa15b7cb9fa72e17c8e99573e3aaa2bd7"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvillagers__data__s.html#aa15b7cb9fa72e17c8e99573e3aaa2bd7">numbers</a></td></tr>
@@ -111,6 +111,20 @@ Data Fields</h2></td></tr>
 <tr class="separator:a1baa0a2d9fd782cf9f7eda0038c4b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a6f20ebd5443105ca5b496dc7fed8fef8" name="a6f20ebd5443105ca5b496dc7fed8fef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f20ebd5443105ca5b496dc7fed8fef8">&#9670;&nbsp;</a></span>has_refill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sem_t* has_refill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7441ef0865bcb3db9b8064dd7375c1ea" name="a7441ef0865bcb3db9b8064dd7375c1ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7441ef0865bcb3db9b8064dd7375c1ea">&#9670;&nbsp;</a></span>id</h2>
 
@@ -153,6 +167,20 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e2bbcc4b9180f88f352804cb3f938cd" name="a0e2bbcc4b9180f88f352804cb3f938cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2bbcc4b9180f88f352804cb3f938cd">&#9670;&nbsp;</a></span>need_refill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sem_t* need_refill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa15b7cb9fa72e17c8e99573e3aaa2bd7" name="aa15b7cb9fa72e17c8e99573e3aaa2bd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa15b7cb9fa72e17c8e99573e3aaa2bd7">&#9670;&nbsp;</a></span>numbers</h2>
 
@@ -161,34 +189,6 @@ Data Fields</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int* numbers</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5c905d8d60d9e4d58e9a4a5ec07ec44c" name="a5c905d8d60d9e4d58e9a4a5ec07ec44c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c905d8d60d9e4d58e9a4a5ec07ec44c">&#9670;&nbsp;</a></span>sem</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sem_t* sem</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9c7e1a74c76619823ae0560683ff5a5b" name="a9c7e1a74c76619823ae0560683ff5a5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c7e1a74c76619823ae0560683ff5a5b">&#9670;&nbsp;</a></span>sem2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sem_t* sem2</td>
         </tr>
       </table>
 </div><div class="memdoc">

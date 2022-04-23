@@ -28,7 +28,7 @@ var panoramix_8h =
     ] ],
     [ "args_management", "panoramix_8h.html#a1b29f381a38a638ffb6b6c681f6b7898", null ],
     [ "druid", "panoramix_8h.html#aea338e19fed61a248209bbe567c154c8", null ],
-    [ "init_data", "panoramix_8h.html#a57e8b39933978c3ac58b456596a17a1c", null ],
+    [ "init_data", "panoramix_8h.html#a7812b78798034cde4e7c2aaba308964d", null ],
     [ "panoramix", "panoramix_8h.html#a42ff0cf65b0acf0a2b7cf816e4a06820", null ],
     [ "print_druid_sentence", "panoramix_8h.html#afc3fb2c2e3e2d4ff3e8221a9df130ecb", null ],
     [ "print_usage", "panoramix_8h.html#a3cf97aeec93f08a91c286a5926f19679", null ],
