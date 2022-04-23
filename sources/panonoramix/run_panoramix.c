@@ -25,7 +25,7 @@ void wait_for_all_villagers(villagers_data_t *data)
         index++;
     }
     data[0].villagers_status = false;
-    sem_post(data[0].sem);
+    sem_post(data[0].need_refill);
     pthread_join(data[0].thread, NULL);
 }
 
@@ -54,14 +54,14 @@ int start_villagers(villagers_data_t *data)
 *
 * @param numbers an array containing the number of villagers, the number of
 * pots, the number of fights, and the number of refills.
-* @param sem a semaphore that will be used to synchronize the villagers
-* @param sem2 This semaphore is used to make sure that the villagers are all in
+* @param need_refill a semaphore that will be used to synchronize the villagers
+* @param has_refill This semaphore is used to make sure that the villagers are all in
 * the village before the druid can start her work.
 * @param mut a mutex to protect the pot
 *
 * @return A pointer to a struct containing all the data needed for the threads.
 */
-void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
+void *init_data(int *numbers, sem_t *need_refill, sem_t *has_refill, pthread_mutex_t *mut)
 {
     villagers_data_t *data;
     int *nb_pots = NULL;
@@ -72,12 +72,12 @@ void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
     if (data == NULL)
         return (NULL);
     pthread_mutex_init(mut, NULL);
-    sem_init(sem, 0, 0);
-    sem_init(sem2, 0, 0);
+    sem_init(need_refill, 0, 0);
+    sem_init(has_refill, 0, 0);
     for (int i = 0; i < numbers[NB_VILLAGERS] + 1; i++) {
         data[i].villagers_status = true;
-        data[i].sem = sem;
-        data[i].sem2 = sem2;
+        data[i].need_refill = need_refill;
+        data[i].has_refill = has_refill;
         data[i].nb_pots = nb_pots;
         data[i].id = i;
         data[i].mut = mut;
@@ -97,18 +97,18 @@ void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut)
 */
 int run_panoramix(int *numbers)
 {
-    sem_t sem;
-    sem_t sem2;
+    sem_t need_refill;
+    sem_t has_refill;
     pthread_mutex_t mut;
-    villagers_data_t *data = init_data(numbers, &sem, &sem2, &mut);
+    villagers_data_t *data = init_data(numbers, &need_refill, &has_refill, &mut);
 
     if (data == NULL)
         return (-1);
     start_villagers(data);
     wait_for_all_villagers(data);
     pthread_mutex_destroy(data->mut);
-    sem_destroy(data->sem);
-    sem_destroy(data->sem2);
+    sem_destroy(data->need_refill);
+    sem_destroy(data->has_refill);
     free(data->nb_pots);
     free(data);
     return (0);

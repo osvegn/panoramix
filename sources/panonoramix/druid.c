@@ -42,15 +42,15 @@ void *druid(void *_data)
 
     print_druid_sentence(DRUID_START, 0);
     while (data->numbers[NB_REFILLS] > 0) {
-        sem_wait(data->sem);
+        sem_wait(data->need_refill);
         if (data->villagers_status == true) {
             data->numbers[NB_REFILLS]--;
             (*data->nb_pots) = data->numbers[POT_SIZE];
             print_druid_sentence(DRUID_REFILL, data->numbers[NB_REFILLS]);
-            sem_post(data->sem2);
+            sem_post(data->has_refill);
         } else {
             print_druid_sentence(DRUID_SLEEP, 0);
-            sem_post(data->sem2);
+            sem_post(data->has_refill);
             return (NULL);
         }
     }

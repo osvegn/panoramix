@@ -66,8 +66,8 @@ void villager_action(villagers_data_t *data, int *nb_fight)
         print_villager_sentence(VILLAGER_FIGHT, data->id, *nb_fight);
     } else {
         print_villager_sentence(VILLAGER_REFILL, data->id, 0);
-        sem_post(data->sem);
-        sem_wait(data->sem2);
+        sem_post(data->need_refill);
+        sem_wait(data->has_refill);
     }
 }
 

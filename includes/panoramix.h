@@ -40,8 +40,8 @@ typedef struct villagers_data_s {
     pthread_t thread;
     int id;
     pthread_mutex_t *mut;
-    sem_t *sem;
-    sem_t *sem2;
+    sem_t *need_refill;
+    sem_t *has_refill;
     bool villagers_status;
     int *numbers;
     int *nb_pots;
@@ -55,4 +55,4 @@ void *villager(void *d);
 void *druid(void *data);
 void print_villager_sentence(villager_sentence_type_t type, int id, int value);
 void print_druid_sentence(druid_sentence_type_t type, int value);
-void *init_data(int *numbers, sem_t *sem, sem_t *sem2, pthread_mutex_t *mut);
+void *init_data(int *numbers, sem_t *need_refill, sem_t *has_refill, pthread_mutex_t *mut);
